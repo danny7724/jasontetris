@@ -1,0 +1,57 @@
+#gc{
+line-height: 1.27;
+}
+
+#gc input, button, select, textarea {
+font-size: 15px;
+line-height: inherit;
+line-height: 1.18;
+}
+
+#gc h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    line-height: inherit;
+}
+
+#gc label {
+font-weight: normal;
+margin-bottom: 0;
+}
+
+#gc input[type="text"] {
+border-radius: 0;
+padding: 2px;
+}
+
+#gc h3, .h3 {
+    font-size: 20px;
+}
+
+#gc h2, .h2 {
+    font-size: 21px;
+}
+
+#gc td, th {
+    padding: 1px;
+}
+
+#gc input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    margin-right: 8px;
+    padding: 0;
+}
+
+#gc .sval {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#createRoom button, input, optgroup, select, textarea{
+    color:black;
+}
+
+#app .label-success{
+    background-color:#00915C;
+}

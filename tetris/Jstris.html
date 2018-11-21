@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://jstris.jezevec10.com/?play=1&mode=1 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="stndz-style"></style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="SdtxEhCnorZi0MNsW5HfRemQRyMLwkIJOOJFyIDx">
+    <title>Jstris</title>
+
+    <!-- Styles -->
+    <link media="all" rel="stylesheet" href="./Jstris_files/main.css">
+    <link rel="shortcut icon" href="https://jstris.jezevec10.com/res/favicon.ico" type="image/vnd.microsoft.icon">
+    <meta name="description" content="Online multiplayer puzzle game">
+    <!-- Scripts -->
+    <script async="" src="./Jstris_files/analytics.js.download"></script><script>
+        window.Laravel = {"csrfToken":"SdtxEhCnorZi0MNsW5HfRemQRyMLwkIJOOJFyIDx"}    </script>
+<script src="./Jstris_files/ga.js.download"></script>
+
+    <style type="text/css">
+    body { background: black !important; }
+</style>
+<link media="all" rel="stylesheet" href="./Jstris_files/bootstrap-override.css">
+<link media="all" rel="stylesheet" href="./Jstris_files/style.css">
+<link media="all" type="text/css" rel="stylesheet" href="./Jstris_files/settingsTabs.css">
+
+<script src="./Jstris_files/en.js.download"></script>
+<script src="./Jstris_files/common.js.download"></script>
+<script src="./Jstris_files/game.js.download"></script>
+<script src="./Jstris_files/live.js.download"></script>
+<script src="./Jstris_files/settings.js.download"></script>
+<script src="./Jstris_files/gameSlots.js.download"></script>
+<script src="./Jstris_files/gameCaption.js.download"></script>
+<script src="./Jstris_files/mapManager.js.download"></script>
+<script src="./Jstris_files/replay.js.download"></script>
+<script src="./Jstris_files/replayer.js.download"></script>
+<script src="./Jstris_files/start.js.download"></script>
+<script src="./Jstris_files/settingsTabs.js.download"></script>
+
+<script src="./Jstris_files/stats.js.download"></script>
+
+<script src="./Jstris_files/lz-string.min.js.download"></script>
+
+<script src="./Jstris_files/md5.min.js.download"></script>
+
+<script src="./Jstris_files/alea.min.js.download"></script>
+
+<script src="./Jstris_files/soundjs-0.6.2.min.js.download"></script>
+<script src="./Jstris_files/hammer.js.download"></script>
+<script>
+var conf_global = {v: "v1.34.2",
+srvScheme: "wss",
+srv: "jstris.jezevec10.com",
+port: "9001",
+name: ""};
+
+</script>
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="https://jstris.jezevec10.com/">
+                        Jstris
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="https://jstris.jezevec10.com/?play=1&amp;mode=1#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Play <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="https://jstris.jezevec10.com/">Live</a></li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="https://jstris.jezevec10.com/play/sprint">Sprint</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://jstris.jezevec10.com/play/sprint/20">20L</a></li>
+                                        <li><a href="https://jstris.jezevec10.com/play/sprint/40">40L</a></li>
+                                        <li><a href="https://jstris.jezevec10.com/play/sprint/100">100L</a></li>
+                                        <li><a href="https://jstris.jezevec10.com/play/sprint/1000">1000L</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a tabindex="-1" href="https://jstris.jezevec10.com/play/cheeseRace">Cheese race</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="https://jstris.jezevec10.com/play/cheeseRace/10">10L</a></li>
+                                        <li><a href="https://jstris.jezevec10.com/play/cheeseRace/18">18L</a></li>
+                                        <li><a href="https://jstris.jezevec10.com/play/cheeseRace/100">100L</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://jstris.jezevec10.com/maps">Map downstack</a></li>
+                                <li><a href="https://jstris.jezevec10.com/play/survival">Survival</a></li>
+                                <li><a href="https://jstris.jezevec10.com/play/ultra">Ultra</a></li>
+                                <li><a href="https://jstris.jezevec10.com/play/practice">Practice</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown ">
+                            <a href="https://jstris.jezevec10.com/?play=1&amp;mode=1#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Leaderboard <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class=""><a href="https://jstris.jezevec10.com/sprint">Sprint</a></li>
+                                <li class=""><a href="https://jstris.jezevec10.com/cheese">Cheese race</a></li>
+                                <li class=""><a href="https://jstris.jezevec10.com/survival">Survival</a></li>
+                                <li class=""><a href="https://jstris.jezevec10.com/ultra">Ultra</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown ">
+                            <a href="https://jstris.jezevec10.com/?play=1&amp;mode=1#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Maps <span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class=""><a href="https://jstris.jezevec10.com/maps">Browse</a></li>
+                                                                <li class=""><a href="https://jstris.jezevec10.com/maps/create">Map Designer</a></li>
+                                <li class=""><a href="https://jstris.jezevec10.com/maps/games">Latest games</a></li>
+                                <li class=""><a href="https://jstris.jezevec10.com/maps/leaderboard">Leaderboard</a></li>
+                            </ul>
+                        </li>
+                        <li class="">
+                            <a href="https://jstris.jezevec10.com/guide">Guide</a>
+                        </li>
+                        <li class="">
+                            <a href="https://jstris.jezevec10.com/about">About</a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Right Side Of Navbar -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+    <a href="https://jstris.jezevec10.com/?play=1&amp;mode=1#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+        en <span class="caret"></span>
+    </a>
+
+    <ul class="dropdown-menu" role="menu">
+                <li>
+            <a href="https://jstris.jezevec10.com/?mode=1&amp;play=1&amp;langSwitch=en">en</a>
+        </li>
+                <li>
+            <a href="https://de.jstris.jezevec10.com/?mode=1&amp;play=1">de</a>
+        </li>
+                <li>
+            <a href="https://es.jstris.jezevec10.com/?mode=1&amp;play=1">es</a>
+        </li>
+                <li>
+            <a href="https://fr.jstris.jezevec10.com/?mode=1&amp;play=1">fr</a>
+        </li>
+                <li>
+            <a href="https://ga.jstris.jezevec10.com/?mode=1&amp;play=1">ga</a>
+        </li>
+                <li>
+            <a href="https://it.jstris.jezevec10.com/?mode=1&amp;play=1">it</a>
+        </li>
+                <li>
+            <a href="https://ja.jstris.jezevec10.com/?mode=1&amp;play=1">ja</a>
+        </li>
+                <li>
+            <a href="https://ko.jstris.jezevec10.com/?mode=1&amp;play=1">ko</a>
+        </li>
+                <li>
+            <a href="https://pt.jstris.jezevec10.com/?mode=1&amp;play=1">pt</a>
+        </li>
+                <li>
+            <a href="https://zh.jstris.jezevec10.com/?mode=1&amp;play=1">zh</a>
+        </li>
+                <li>
+            <a href="https://zh-tw.jstris.jezevec10.com/?mode=1&amp;play=1">zh-tw</a>
+        </li>
+                <li>
+            <a target="_blank" href="https://github.com/jezevec10/jstris-multilang"><em>Submit translation</em></a>
+        </li>
+    </ul>
+</li>
+                        <!-- Authentication Links -->
+                                                    <li><a href="https://jstris.jezevec10.com/login">Login</a></li>
+                            <li><a href="https://jstris.jezevec10.com/register">Register</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container" id="gc">
+    <div id="BG_only" class="absBg" style="z-index:-100;"></div>
+    <div id="settingsBox" style="display:none;">
+        <div class="settingsTabs">
+            <ul id="tabsMenu">
+                <li><a href="javascript:void(0)" data-target="tab_controls" class="active">Controls</a></li>
+                <li><a href="javascript:void(0)" data-target="tab_settings" class="">Game settings</a></li>
+                <li><a href="javascript:void(0)" data-target="tab_appear" class="">Appearance</a></li>
+                <li><a href="javascript:void(0)" data-target="tab_other" class="">+</a></li>
+            </ul>
+
+            <div class="setTab" id="tab_controls" style="display: block;">
+                <h2>Game controls</h2>
+                <em>Click on a text box and press the key you want.</em>
+                <table>
+                    <tbody><tr><td width="180">Move Left:</td><td width="125"><input id="input1" type="text" size="7" value=""></td><td id="kc1">0</td></tr>
+                    <tr><td>Move Right:</td><td><input id="input2" type="text" size="7" value=""></td><td id="kc2">0</td></tr>
+                    <tr><td>Soft Drop:</td><td><input id="input3" type="text" size="7" value=""></td><td id="kc3">0</td></tr>
+                    <tr><td>Hard Drop:</td><td><input id="input4" type="text" size="7" value=""></td><td id="kc4">0</td></tr>
+                    <tr><td>Rotate Left:</td><td><input id="input5" type="text" size="7" value=""></td><td id="kc5">0</td></tr>
+                    <tr><td>Rotate Right:</td><td><input id="input6" type="text" size="7" value=""></td><td id="kc6">0</td></tr>
+                    <tr><td>Rotate 180:</td><td><input id="input8" type="text" size="7" value=""></td><td id="kc8">0</td></tr>
+                    <tr><td>Hold:</td><td><input id="input7" type="text" size="7" value=""></td><td id="kc7">0</td></tr>
+                </tbody></table>
+
+                <table>
+                    <tbody><tr><td><input type="checkbox" id="touch"></td><td><label for="touch">Enable touch screen controls (experimental)</label></td></tr>
+                </tbody></table>
+
+            </div>
+
+            <div class="setTab" id="tab_settings" style="display: none;">
+                <h2>Game settings</h2>
+                <table>
+                    <tbody><tr><td width="26%">DAS:</td><td><input size="10" id="DAS" type="text" value="117">
+                        <span style="padding-left:10px;"><a style="color:grey;" href="javascript:alert(&#39;TF DAS table:\nLevel 1 - 267\nLevel 2 - 183\nLevel 3 - 150\nLevel 4 - 133\nLevel 5 - 117&#39;)">TF DAS</a>
+                            | <a style="color:grey;" id="nullpoDAS" href="javascript:void(0);">NullpoMino</a></span>
+                    </td></tr>
+                    <tr><td>ARR:</td><td><input size="10" id="ARR" type="text" value="0">
+                        <span style="padding-left:10px;"><a style="color:grey;" href="javascript:alert(&#39;TF ARR table:\nLevel 1 - 50\nLevel 2 - 33\nLevel 3 - 22\nLevel 4 - 20\nLevel 5 - 17&#39;)">TF ARR</a></span>
+                    </td></tr>
+                    <tr><td>Soft-drop:</td><td>
+                        <form name="sdForm" style="display: block; margin-top:7px;">
+                            <input type="radio" name="sds" value="0" id="sd0"><label for="sd0"> Slow</label>
+                            <input type="radio" name="sds" value="1" id="sd1"><label for="sd1"> Medium</label>
+                            <input type="radio" name="sds" value="2" id="sd2" checked=""><label for="sd2"> Fast</label><br>
+                            <input type="radio" name="sds" value="3" id="sd3"><label for="sd3"> Ultra</label>
+                            <input type="radio" name="sds" value="4" id="sd4"><label for="sd4"> Instant</label>
+                        </form>
+                    </td></tr>
+                    <tr><td>Grid:</td><td>
+                        <form name="gridForm" style="display: block; margin-top:7px;">
+                            <input type="radio" name="grs" value="0" id="gr0"><label for="gr0"> None</label>
+                            <input type="radio" name="grs" value="1" id="gr1" checked=""><label for="gr1"> Standard</label>
+                            <input type="radio" name="grs" value="2" id="gr2"><label for="gr2"> Partial</label><br>
+                            <input type="radio" name="grs" value="3" id="gr3"><label for="gr3"> Vertical</label>
+                            <input type="radio" name="grs" value="4" id="gr4"><label for="gr4"> Full</label>
+                        </form>
+                    </td></tr>
+                    <tr><td>Ghost:</td><td><input type="checkbox" id="ghost" checked=""><label for="ghost"> Enabled</label></td></tr>
+                </tbody></table>
+            </div>
+
+            <div class="setTab" id="tab_appear" style="display: none;">
+                <h2>Appearance &amp; Sound</h2>
+
+                <table>
+                    <tbody><tr><td>Blocks:</td><td>
+                            <form name="blockSkin" style="display: block; margin-top:7px;">
+                                <input type="radio" name="bSkin" value="0" id="bs0"><label for="bs0"> Solid color (no skin)</label><br>
+                                <input type="radio" name="bSkin" value="6" id="bs01"><label for="bs01"> Invisible</label><br>
+                                <input type="radio" name="bSkin" value="1" id="bs1"><label for="bs1"> <img height="20" src="./Jstris_files/b1.png"></label><br>
+                                <input type="radio" name="bSkin" value="2" id="bs2"><label for="bs2"> <img height="20" src="./Jstris_files/b2.png"></label><br>
+                                <input type="radio" name="bSkin" value="3" id="bs3"><label for="bs3"> <img height="20" src="./Jstris_files/b3.png"></label><br>
+                                <input type="radio" name="bSkin" value="4" id="bs4"><label for="bs4"> <img height="20" src="./Jstris_files/b4.png"></label><br>
+                            </form>
+                        </td></tr>
+                </tbody></table>
+
+                <table>
+                    <tbody><tr><td><input type="checkbox" id="SE" checked="checked"></td><td><label for="SE">Enable sound effects:</label>
+                            <select id="sfxSelect">
+                                <option value="0">Nullpomino SE</option>
+                                <option value="1">Yotipo's SE</option>
+                            </select>
+                        </td></tr>
+                    <tr><td><input type="checkbox" id="SEstart" checked="checked"></td><td><label for="SEstart">Enable game start sound effect</label></td></tr>
+                    <tr><td><input type="checkbox" id="SEfault" checked="checked"></td><td><label for="SEfault">Special sound effect on finesse fault</label></td></tr>
+                    <tr><td><input type="checkbox" id="esound" checked="checked"></td><td><label for="esound">Player join notification (a ding)</label></td></tr>
+                </tbody></table>
+                SE volume: <input id="vol-control" type="range" min="0" max="100" value="100" step="1" style="width:150px;display:inline-block;padding-top:9px">
+                            <span id="vol-value"></span>
+            </div>
+
+            <div class="setTab" id="tab_other" style="display: none;">
+                <h2>Other settings</h2>
+                <table>
+                    <tbody><tr><td>Nickname:</td><td><input id="nickname1" type="text" value=""></td></tr>
+                    <tr><td></td><td><span class="settingsDesc">Save and reload the game for this to take effect.</span></td></tr>
+                    <tr><td>Sprint reset:</td><td><input id="input9" class="keySelect" type="text" size="7" value=""><span id="kc9" style="display:none">0</span>
+                        or <input type="checkbox" id="ffRestart"><label for="ffRestart">Finesse fault</label></td></tr>
+                    <tr><td></td><td><span class="settingsDesc">Choose an alternative key to reset a sprint game.</span></td></tr>
+                    <tr><td>Game reset:</td><td><input id="input10" class="keySelect" type="text" size="7" value=""><span id="kc10" style="display:none">0</span></td></tr>
+                    <tr><td></td><td><span class="settingsDesc">Choose an alternative key to reset a live game.</span></td></tr>
+                </tbody></table>
+                
+                <table>
+                    <tbody><tr><td><input type="checkbox" id="rescaleNow" checked="checked"></td><td><label for="rescaleNow">Resize multiplayer fields immediately</label></td></tr>
+                    <tr><td></td><td><span class="settingsDesc">If unchecked fields of new players will appear next round</span></td></tr>
+                </tbody></table>
+                
+            </div>
+        </div>
+
+        <button id="settingsSave"><img class="btnIcn" src="./Jstris_files/check.svg">Save Settings &amp; Close</button>
+        <button id="settingsReset"><img class="btnIcn" src="./Jstris_files/rubbish.svg">Reset all</button>
+    </div>
+
+    <div id="gameFrame">
+        <div id="moreResults" style="display:none;">
+            <div id="moreClose">Close</div>
+            <h3>Game results</h3>
+            <div id="moreData"></div>
+        </div>
+        <div id="main" style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+            <canvas id="holdCanvas" width="96" height="96"></canvas>
+            <div id="stage">
+                <canvas id="bgLayer" class="layer bgLayer" width="248" height="480"></canvas>
+                <canvas id="myCanvas" class="layer mainLayer" width="248" height="480" tabindex="1"></canvas>
+                <div id="practice-menu-big" style="display:none">
+                    <h4>Practice modes</h4>
+                    <div id="practice-sprint" class="prMenuItem">
+                        Sprint                        <span class="prKey" style="visibility:visible;">F4</span>
+                    </div>
+                    <div class="practice-submenu">
+                        <div id="pr-sp-20" class="pract-subopt">20</div>
+                        <div id="pr-sp-40" class="pract-subopt">40</div>
+                        <div id="pr-sp-100" class="pract-subopt">100</div>
+                        <div id="pr-sp-1000" class="pract-subopt">1K</div>
+                    </div>
+                    <div id="practice-cheese" class="prMenuItem">
+                        Cheese race                        <span class="prKey" style="visibility:hidden;">F4</span>
+                    </div>
+                    <div class="practice-submenu">
+                        <div id="pr-ch-10" class="pract-subopt">10</div>
+                        <div id="pr-ch-18" class="pract-subopt">18</div>
+                        <div id="pr-ch-100" class="pract-subopt">100</div>
+                        <div id="pr-ch-inf" class="pract-subopt">∞</div>
+                    </div>
+                    <a class="prMenuItem" href="https://jstris.jezevec10.com/maps">
+                        Map downstack
+                    </a>
+                    <div id="practice-su" class="prMenuItem">
+                        Survival                        <span class="prKey" style="visibility:hidden;">F4</span>
+                    </div>
+                    <div id="practice-ul" class="prMenuItem">
+                        Ultra                        <span class="prKey" style="visibility:hidden">F4</span>
+                    </div>
+                    <div id="practice-fp" class="prMenuItem">
+                        Free play                        <span class="prKey" style="visibility:hidden;">F4</span>
+                    </div>
+                    <div id="less-practice" class="prMenuItem">
+                        Show less                    </div>
+                </div>
+                <div id="team-options" style="display:none">
+                    <h4>Team selection</h4>
+                    <div id="tsArea">
+                    </div>
+                </div>
+            <div class="gCapt" style="width: 242px; top: 288px; height: 73px; color: rgb(203, 214, 0); display: none;"><div style="font-size: 22px; margin-top: 7px;">Spectator mode</div><div style="font-size: 15px; margin-top: 7px;">Type /play to join the game</div></div><div class="gCapt" style="width: 242px; opacity: 1; top: 264px; height: 73px; color: rgb(203, 214, 0); font-weight: bold; display: none;"><div style="font-size: 31px; margin-top: 15px;">GO!</div></div></div>
+            <div id="rstage">
+                <canvas id="queueCanvas" width="96" height="360"></canvas>
+                <div id="rInfoBox" class="unsel" style="display: block;">
+                    <div id="practiceMenu" style="display: none;">
+                        <b>Practice:</b>
+                        <div id="practice-sprint-tiny" class="prMenuItem">
+                            Sprint                            <span class="prKey" style="visibility:visible;">F4</span>
+                        </div>
+                        <div id="practice-ch-tiny" class="prMenuItem">
+                            Cheese race                            <span class="prKey" style="visibility:hidden;">F4</span>
+                        </div>
+                        <div id="more-practice" class="prMenuItem">
+                            Show more                        </div>
+                    </div>
+                    <div id="sprintInfo" style="display: block;">
+                        <div id="lrem">40</div>
+                        <div id="sprintText"><div id="stLrem" style="display: block;">lines remaining</div><div id="stTrem" style="display:none">time remaining</div>F4 to restart</div>
+                    </div>
+                    <div id="teamInfo" style="display:none">
+                        <div>Playing for:</div>
+                        <div id="myTeam" style="background-color:blue">Team Blue</div>
+                    </div>
+                </div>
+            </div>
+            <div style="clear:both;">
+                <div id="buttonsBox">
+                    <button id="lobby">Lobby</button>
+                    <button id="settings">Settings</button>
+                    <button id="res" disabled="">New game</button>
+                </div>
+                <div id="fps"></div>
+                <div id="stats">
+                    <table>
+                        <tbody><tr><td class="ter" width="120"><span id="rTimeT" style="display: block;">Round time</span><span id="scoreT" style="display:none">Score</span></td><td class="sval"><span id="clock">11.19</span></td></tr>
+                        <tr><td class="ter">Sent</td><td class="sval"><span id="sentText">0</span></td></tr>
+                        <tr><td class="ter" id="aux1">Finesse</td><td class="sval"><span id="receivedText">0</span></td></tr>
+                        <tr><td class="ter">PPS</td><td class="sval"><span id="PPS">0.09</span></td></tr>
+                        <tr><td class="ter" id="aux2">#</td><td class="sval"><span id="APM">1</span></td></tr>
+                    </tbody></table>
+                </div>
+            </div>
+        </div>
+        <div class="players">
+            <div id="lobbyBox" style="display: none; height: 453px;">
+                <h3>Lobby</h3>
+                <div id="lobbyContent">
+                    <table class="lobbyTable" id="lobbyTable">
+                        <thead><tr><th>Room name</th><th></th><th class="gamesCol">Games</th><th class="plCol">Players</th></tr></thead>
+                        <tbody><tr class="lobbyRow" onclick="window.joinRoom(&#39;2&#39;)"><td colspan="2">Bot Room</td><td class="gamesCol">4038</td><td class="plCol">10 <span class="plusSpec">(+5)</span></td></tr><tr class="lobbyRow" onclick="window.joinRoom(&#39;3&#39;)"><td colspan="2">1v1 Room</td><td class="gamesCol">2101</td><td class="plCol">1</td></tr><tr class="lobbyRow" onclick="window.joinRoom(&#39;4&#39;)"><td colspan="2">Cheese Room</td><td class="gamesCol">541</td><td class="plCol">1</td></tr><tr class="lobbyRow" onclick="window.joinRoom(&#39;1&#39;)"><td>Speed Limit Room</td><td class="modeCol"><img class="slIc" src="./Jstris_files/speedLimit.svg"><span class="slVal">1.5</span><span class="ppsTag">PPS</span></td><td class="gamesCol">89</td><td class="plCol">0</td></tr><tr class="lobbyRow" onclick="window.joinRoom(&#39;5&#39;)"><td colspan="2">Team Room</td><td class="gamesCol">18</td><td class="plCol">0</td></tr></tbody>
+                    </table>
+                    <div class="roomListSep" id="rLSep" style="display: none;">Custom rooms</div>
+                    <table class="lobbyTable" id="customTable"></table>
+                </div>
+                <div id="lobbyBottom">
+                    <button id="createRoomButton"><img class="btnIcn" src="./Jstris_files/plus.svg">Create room</button>
+                    <button id="refreshLobby"><img class="btnIcn" src="./Jstris_files/reload.svg">Reload</button>
+                    <button id="closeLobby"><img class="btnIcn" src="./Jstris_files/exit.svg">Close</button>
+                </div>
+            </div>
+            <div id="createRoom" style="display: none; height: 453px;">
+                <h3>Create room</h3>
+                <table>
+                    <tbody><tr><td width="130">Room name:</td><td><input type="text" id="roomName"></td></tr>
+                    <tr><td>Players:</td>
+                        <td>
+                            <select id="numPlayers" size="1">
+                                <option value="28">No limit</option>
+                                <option value="7">7</option>
+                                <option value="6">6</option>
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                            </select>						
+                        </td>
+                    </tr>
+                    <tr id="trMode"><td>Mode:</td>
+                        <td>
+                            <select id="gameMode" size="1">
+                                <option value="0">Standard</option>
+                                <option value="2">Team</option>
+                                <option value="1">Cheese</option>
+                            </select>						
+                        </td>
+                    </tr>
+                    <tr id="trPriv"><td>Private:</td><td><input type="checkbox" id="isPrivate"></td></tr>
+                </tbody></table>
+
+                <div class="moreTitle" id="moreSet1">
+                    <span class="more_opt">
+                        <input type="radio" name="moreSel" value="2" id="more_preset"><label for="more_preset"> Preset</label>
+                        <input type="radio" name="moreSel" value="0" id="more_simple"><label for="more_simple"> Simple</label>
+                        <input type="radio" name="moreSel" value="1" id="more_adv"><label for="more_adv"> All</label>
+                    </span>
+                    <h4>More settings</h4>
+                    <div style="clear:both;"></div>
+                </div>
+                <div id="presetMode" style="display: block;">
+                    <table>
+                    <tbody><tr><td width="130">Use preset:</td>
+                        <td>
+                            <select id="presetSel" size="1">
+                                <option value="0" data-desc="The default settings">Default</option>
+                            </select>
+                            <img id="presetLoadState" style="visibility:hidden" src="./Jstris_files/spinWhite.svg">
+                        </td>
+                    </tr>
+                    <tr><td></td><td><span id="settingsDesc" class="settingsDesc ruleDesc"></span></td></tr>
+                    </tbody></table>
+                    <div style="margin-top:20px;font-size:12px">
+                        Other options:
+                        <ul style="margin-top:5px"><li><a href="javascript:void(0)" id="customPre">Use custom preset</a></li>
+                        <li><a href="https://jstris.jezevec10.com/presets" target="_blank">Browse custom presets</a></li>
+                        <li><a href="https://jstris.jezevec10.com/presets/submit" target="_blank">Submit a new one</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <table id="moreSet2" style="display: none;">
+                    <tbody><tr class="simple"><td>Attack:</td>
+                        <td>
+                            <select id="attackMode" size="1">
+                                <option value="0">TF</option>
+                                <option value="1">TOJ</option>
+                                <option value="2">No spins</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="adv"><td>Attack table:</td><td><input type="text" id="attackTable">
+                            <span class="inputDesc"><a href="javascript:alert(&#39;Insert attacks in this order:\n0lines,1line,2lines,3lines,4lines,TD,TT,TS,TMS,PC,B2B&#39;)">?</a></span></td></tr>
+                    <tr class="adv"><td>Combo attack:</td><td><input type="text" id="comboTable">
+                            <span class="inputDesc"><a href="javascript:alert(&#39;Insert combo attacks in this order:\nNoCombo,1,2,3,4,5,6,7,8,9,10,11,12+&#39;)">?</a></span></td></tr>
+                    <tr><td>Garbage distribution:</td>
+                        <td>
+                            <select id="gdmSel" size="1">
+                                <option value="0">Targets</option>
+                                <option value="1">Divide</option>
+                                <option value="2">To all</option>
+                                <option value="3">To least</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr><td>Garbage blocking:</td>
+                        <td>
+                            <select id="gblockSel" size="1">
+                                <option value="0">Full</option>
+                                <option value="1">Limited</option>
+                                <option value="2">None</option>
+                                <option value="3">Instant</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr><td>Randomizer:</td>
+                        <td>
+                            <select id="rndSel" size="1">
+                                <option value="0">7-bag</option>
+                                <option value="1">14-bag</option>
+                                <option value="2">Classic</option>
+                                <option value="3">One block</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr><td>Previews:</td>
+                        <td>
+                            <select id="prSel" size="1">
+                                <option value="5">5</option>
+                                <option value="4">4</option>
+                                <option value="3">3</option>
+                                <option value="2">2</option>
+                                <option value="1">1</option>
+                                <option value="0">0</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr><td>Solid garbage:</td><td><input type="checkbox" id="hasSolid"> After <input type="text" id="solid" style="width:80px" disabled=""><span class="inputDesc">(s)</span></td></tr>
+                    <tr><td>Hold:</td><td><input type="checkbox" id="hasHold" checked=""></td></tr>
+                    <tr><td width="130">Clear delay:</td><td><input type="text" id="clearDelay" style="width:80px"><span class="inputDesc">(ms)</span></td></tr>
+                    <tr><td>Speed limit:</td><td><input type="text" id="speedLimit" style="width:80px"><span class="inputDesc">(PPS)</span></td></tr>
+                    <tr class="adv"><td>Garbage Delay:</td><td><input type="text" id="garbageDelay" style="width:80px"><span class="inputDesc">(ms)</span></td></tr>
+                    <tr class="adv"><td>Messiness:</td><td><input type="text" id="mess" style="width:80px"><span class="inputDesc">%</span></td></tr>
+                    
+                </tbody></table>
+                <div id="saveData" style="display:none">
+                    <h3>Save the preset</h3>
+                    Here is your preset data, you can <a href="https://jstris.jezevec10.com/presets/submit" target="_blank">submit it here</a> to make it available to everyone.
+                    <textarea id="saveDataArea" onclick="this.focus();this.select()"></textarea><br>
+                    <button id="saveDataClose">Close</button>
+                </div>
+                <div class="roomButtons">
+                    <img id="createState" style="display:none" src="./Jstris_files/spinWhite.svg">
+                    <button id="create" style="min-width:150px"><img class="btnIcn" src="./Jstris_files/check.svg">Create</button>
+                    <button id="cancelCreation" style="min-width:90px"><img class="btnIcn" src="./Jstris_files/exit.svg">Cancel</button>
+                    <button id="saveRD" style="visibility: hidden;"><img class="btnIcn" src="./Jstris_files/download.svg">Save</button>
+                </div>
+            </div>
+            
+            <div class="slots" id="gameSlots" style="height: 446px;">
+                <div id="resultsBox" style="display: none; max-height: 455px;">
+                    <a target="_blank" href="https://jstris.jezevec10.com/?play=1&amp;mode=1#" id="saveLink"><img src="./Jstris_files/link.png" height="16"></a>
+                    <a href="javascript:void(0)" id="closeLink"><img src="./Jstris_files/close.png" height="16"></a>
+                    <h3>Game results</h3>
+                    <div id="resultsContent"></div>
+                    <div id="showMore">
+                        <span>Show more details</span>
+                    </div>
+                </div>
+            <div class="slot" style="left: 37px; top: 0px; display: block;"><span style="width: 105px; height: 18px; font-size: 15px;"></span><div style="position: relative;"><canvas class="layer bgLayer" width="105" height="200"></canvas><canvas class="layer mainLayer" width="105" height="200"></canvas><canvas class="layer mp-holdCan" width="32" height="32" style="left: -35.2px; display: none;"></canvas><canvas class="layer mp-queueCan" width="32" height="120" style="left: 111.4px; display: none;"></canvas></div></div><div class="slot" style="left: 172px; top: 0px; display: block;"><span style="width: 105px; height: 18px; font-size: 15px;"></span><div style="position: relative;"><canvas class="layer bgLayer" width="105" height="200"></canvas><canvas class="layer mainLayer" width="105" height="200"></canvas><canvas class="layer mp-holdCan" width="32" height="32" style="left: -35.2px; display: none;"></canvas><canvas class="layer mp-queueCan" width="32" height="120" style="left: 111.4px; display: none;"></canvas></div></div><div class="slot" style="left: 307px; top: 0px; display: block;"><span style="width: 105px; height: 18px; font-size: 15px;"></span><div style="position: relative;"><canvas class="layer bgLayer" width="105" height="200"></canvas><canvas class="layer mainLayer" width="105" height="200"></canvas><canvas class="layer mp-holdCan" width="32" height="32" style="left: -35.2px; display: none;"></canvas><canvas class="layer mp-queueCan" width="32" height="120" style="left: 111.4px; display: none;"></canvas></div></div><div class="slot" style="left: 37px; top: 228px; display: block;"><span style="width: 105px; height: 18px; font-size: 15px;"></span><div style="position: relative;"><canvas class="layer bgLayer" width="105" height="200"></canvas><canvas class="layer mainLayer" width="105" height="200"></canvas><canvas class="layer mp-holdCan" width="32" height="32" style="left: -35.2px; display: none;"></canvas><canvas class="layer mp-queueCan" width="32" height="120" style="left: 111.4px; display: none;"></canvas></div></div><div class="slot" style="left: 172px; top: 228px; display: block;"><span style="width: 105px; height: 18px; font-size: 15px;"></span><div style="position: relative;"><canvas class="layer bgLayer" width="105" height="200"></canvas><canvas class="layer mainLayer" width="105" height="200"></canvas><canvas class="layer mp-holdCan" width="32" height="32" style="left: -35.2px; display: none;"></canvas><canvas class="layer mp-queueCan" width="32" height="120" style="left: 111.4px; display: none;"></canvas></div></div><div class="slot" style="left: 307px; top: 228px; display: block;"><span style="width: 105px; height: 18px; font-size: 15px;"></span><div style="position: relative;"><canvas class="layer bgLayer" width="105" height="200"></canvas><canvas class="layer mainLayer" width="105" height="200"></canvas><canvas class="layer mp-holdCan" width="32" height="32" style="left: -35.2px; display: none;"></canvas><canvas class="layer mp-queueCan" width="32" height="120" style="left: 111.4px; display: none;"></canvas></div></div></div>
+            <div class="chatArea">
+                <div id="chatExpand" class="exUp"></div>
+                <div id="chatLobby" class="lch"></div>
+                <div id="chatBox" style="height: 154px;">
+                    <div id="ch1"><div class="chl srv"><em>This is your private room where you won't be disturbed while playing. Check the Lobby to see public rooms. Restart by F4 or set a custom key.</em></div></div>
+                    <div id="ch2"></div>
+                </div>
+                <div id="chatInputArea">
+                    <input type="text" autocomplete="off" size="500" id="chatInput" value="" placeholder="Type your username to be able to chat!"><button id="sendMsg">Set</button>
+                    <span id="rem" style="display:none;"><input type="checkbox" checked="checked" id="rememberName"><label for="rememberName">Remember nickname</label></span>
+                </div>
+                <div id="chatInputNA" style="display:none"><a href="https://jstris.jezevec10.com/login">Log in</a> first to use the lobby chat.</div>
+                <div id="connectStatus">Connected (client 1123799), v1.34.2</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="./Jstris_files/app.js.download"></script>
+
+
+</body></html>

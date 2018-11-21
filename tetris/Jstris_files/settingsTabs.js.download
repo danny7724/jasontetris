@@ -1,0 +1,33 @@
+var settingsTabs = {
+	"tabsClass" : "setTab",
+	"menuId"    : "tabsMenu",
+	"hideAll" : function(){
+		var tabs = document.getElementsByClassName(this.tabsClass);
+		for (var i=0; i<tabs.length; i++) {
+			var item=tabs[i];
+			item.style.display="none";
+		}
+		for(var i=0; i<this.navs.length; i++){
+			this.navs[i].className="";
+		}
+	},
+	"open" : function(elem){
+		this.hideAll();
+		elem.className="active";
+		var targetId=elem.dataset.target;
+		var target=document.getElementById(targetId);
+		target.style.display="block";
+	},
+	"init" : function(){
+		var menu=document.getElementById(this.menuId);
+		this.navs=menu.getElementsByTagName("a");
+		this.hideAll();
+		//add event listeners on links
+		for(var i=0; i<this.navs.length; i++){
+			if(i==0)this.open(this.navs[i]);
+			this.navs[i].onclick=function(){
+				settingsTabs.open(this);
+			}
+		}
+	}
+};

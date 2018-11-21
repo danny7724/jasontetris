@@ -1,0 +1,49 @@
+div.settingsTabs{
+padding: 12px 0px 9px;
+}
+
+#tabsMenu{
+padding:0;
+margin:0 10px;
+text-align:left;
+}
+
+#tabsMenu li{
+display:inline;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+#tabsMenu li a{
+padding:3px 6px;
+color: #121212;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+background-color:#a1a1a1;
+border:1px solid #f3f3f3;
+}
+
+#tabsMenu li a:hover{
+background-color:#F0F0F0;
+}
+
+#tabsMenu li a.active{
+background-color:#FFFFFF;
+color:#000000;
+}
+
+div.setTab{
+padding:5px 15px 15px;
+display:none;
+border:1px solid #E0E0E0;
+height: 370px;
+margin-top:3px;
+overflow:auto;
+}
+
+div.setTab.active{
+display:block;
+}
+
